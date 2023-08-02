@@ -1,0 +1,15 @@
+.form-control {
+    display: block;
+    margin-bottom: 16px;
+
+    label,
+    input {
+      display: block;
+    }
+
+    input {
+      box-sizing: border-box;
+      padding: 8px;
+      width: 100%;
+    }
+  }

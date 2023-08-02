@@ -8,36 +8,8 @@ type InputType = 'text' | 'number' | 'email';
   selector: 'app-input',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <div class="form-control">
-      <label [for]="inputId" *ngIf="label">{{ label }}</label>
-      <input
-        (input)="onInput($event)"
-        [type]="type"
-        [value]="value"
-        [id]="inputId"
-      />
-    </div>
-  `,
-  styles: [
-    `
-      .form-control {
-        display: block;
-        margin-bottom: 16px;
-
-        label,
-        input {
-          display: block;
-        }
-
-        input {
-          box-sizing: border-box;
-          padding: 8px;
-          width: 100%;
-        }
-      }
-    `,
-  ],
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.scss'],
 })
 export class InputComponent {
   @Input() inputId = Math.random().toString(16);

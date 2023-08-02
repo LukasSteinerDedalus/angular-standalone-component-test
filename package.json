@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --output-hashing=none --configuration production",
-    "package": "cat dist/angular/{runtime,polyfills,main}.js > dist/angular/component-lib.js",
+    "package": "cat dist/angular/{runtime,polyfills,main}.js > component-lib/component-lib.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
