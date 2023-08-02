@@ -20,8 +20,15 @@ function App() {
   );
 }
 
+
 function getFormValues() {
   const form = document.getElementById("user-form");
+
+  Array.from(form.querySelectorAll("dbs-input")).forEach((input) => {
+    input.addEventListener("valueChange", (e) => {
+      console.log(e.target.value);
+    });
+  });
 
   const data = Array.from(form.querySelectorAll("dbs-input")).map(
     (input) => {
@@ -31,6 +38,7 @@ function getFormValues() {
       };
     }
   );
+
   console.log(data);
 }
 

@@ -27,6 +27,6 @@ export class InputComponent {
     const target = $event.target as HTMLInputElement;
     this.value = target.value;
     this.valueChange.emit(target.value);
-    this.loggerService.log('TEST: ' + target.value.toString());
+    this.loggerService.log('Test LoggerService injection');
   }
 }
