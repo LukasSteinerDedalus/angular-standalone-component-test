@@ -7,15 +7,16 @@ import { HeaderComponent } from './header/header.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     MessagesComponent,
     HeroesComponent,

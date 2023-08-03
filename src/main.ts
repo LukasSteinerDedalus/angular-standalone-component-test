@@ -4,10 +4,11 @@ import { InputComponent } from './app/ui/input/input.component';
 import { MessagesComponent } from './app/messages/messages.component';
 import { HeroesComponent } from './app/heroes/heroes.component';
 
-// import { AppModule } from './app/app.module';
+import { AppModule } from './app/app.module';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-// platformBrowserDynamic().bootstrapModule(AppModule)
-//   .catch(err => console.error(err));
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
 
 (async () => {
   const app = await createApplication({
