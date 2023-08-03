@@ -6,6 +6,8 @@ import { HeroesComponent } from './app/heroes/heroes.component';
 
 import { AppModule } from './app/app.module';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { HeroSearchComponent } from './app/hero-search/hero-search.component';
+import { DashboardComponent } from './app/dashboard/dashboard.component';
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
@@ -30,9 +32,19 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   });
   customElements.define('dbs-detail', heroDetailElement);
 
+  const heroSearchElement = createCustomElement(HeroSearchComponent, {
+    injector: app.injector,
+  });
+  customElements.define('dbs-search', heroSearchElement);
+
   const messagesElement = createCustomElement(MessagesComponent, {
     injector: app.injector,
   });
   customElements.define('dbs-messages', messagesElement);
+
+  const dashboardElement = createCustomElement(DashboardComponent, {
+    injector: app.injector,
+  });
+  customElements.define('dbs-dashboard', dashboardElement);
 
 })();

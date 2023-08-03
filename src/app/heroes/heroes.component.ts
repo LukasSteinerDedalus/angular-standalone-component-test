@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
@@ -13,6 +13,7 @@ import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
   styleUrls: ['./heroes.component.css'],
   standalone: true,
   imports: [CommonModule, HeroDetailComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HeroesComponent implements OnInit {
 

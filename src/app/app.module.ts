@@ -8,11 +8,15 @@ import { MessagesComponent } from './messages/messages.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -21,6 +25,12 @@ import { FormsModule } from '@angular/forms';
     MessagesComponent,
     HeroesComponent,
     HeroDetailComponent,
+    DashboardComponent,
+    HeroSearchComponent,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
