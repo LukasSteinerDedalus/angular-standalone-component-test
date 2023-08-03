@@ -13,6 +13,8 @@ function App() {
           <dbs-input label="Email" type="email" value="Hello world"></dbs-input>
           <dbs-input label="Message" type="text" value="Hello world"></dbs-input>
           <button onClick={getFormValues}>Submit</button>
+          <dbs-heroes></dbs-heroes>
+          <dbs-messages></dbs-messages>
         </form>
       </header>
       
