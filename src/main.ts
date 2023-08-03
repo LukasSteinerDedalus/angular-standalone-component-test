@@ -25,6 +25,11 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   });
   customElements.define('dbs-heroes', heroesElement);
 
+  const heroDetailElement = createCustomElement(HeroesComponent, {
+    injector: app.injector,
+  });
+  customElements.define('dbs-heroDetail', heroDetailElement);
+
   const messagesElement = createCustomElement(MessagesComponent, {
     injector: app.injector,
   });
